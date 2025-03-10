@@ -96,3 +96,35 @@ main {
         width: 100%;
     }
 }
+
+
+.container-form {
+    margin: 50px 200px;
+    text-align: center;
+    padding: 75px;
+    border: 3px solid black;
+    font-size: 25px;
+    border-radius: 30px;
+    background-color: #D3D3D3;
+}
+.container-form h2 {
+    text-decoration: underline;
+    margin-bottom: 100px;
+}
+.container-form #new-member-form > div{
+    margin: 30px;
+}
+
+.container-form #new-member-form #form-send-button {
+    padding: 20px;
+    background-color: rgb(39, 166, 208);
+    color: white;
+    border-radius: 10px;
+    font-size: 20px;
+    border: 2px solid white;
+    box-shadow: 0px 3px 1px 1px white;
+}
+
+button:hover {
+    cursor: pointer;
+}
