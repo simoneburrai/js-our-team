@@ -78,7 +78,7 @@ function cardElementCreating(obj){
   const name = obj.name;
   const role = obj.role;
   const img = obj.img;
-  const email = obj.email;
+  const email = obj.mail;
 
   const cardElement = `
   <div class="card">
