@@ -39,8 +39,11 @@ const teamMembers = [
 
 // HTML Elements 
 const cardContainerElement = document.getElementById("card-container");
-
-
+const formElement = document.getElementById("new-member-form");
+const userNameElement = document.getElementById("user-name");
+const userRoleElement = document.getElementById("user-role");
+const userMailElement = document.getElementById("user-mail");
+const userImgElement = document.getElementById("user-image");
 
 cardContainerElement.innerHTML = "";
 for(let i=0; i < teamMembers.length; i++){
@@ -50,16 +53,33 @@ for(let i=0; i < teamMembers.length; i++){
 }
 
 
+formElement.addEventListener("submit", function(event){
+  event.preventDefault();
+  console.log("hai inviato il form")
+  const userMember = {
+    name: userNameElement.value,
+    role: userRoleElement.value,
+    mail: userMailElement.value,
+    img: userImgElement.value
+  }
+  
+  cardContainerElement.innerHTML += cardElementCreating(userMember);
+})
 
 
 
+
+
+
+
+// Functions 
 
 function cardElementCreating(obj){
   const name = obj.name;
   const role = obj.role;
   const img = obj.img;
   const email = obj.email;
-  
+
   const cardElement = `
   <div class="card">
     <div class="img-container">
