@@ -53,9 +53,11 @@ for(let i=0; i < teamMembers.length; i++){
 }
 
 
-formElement.addEventListener("submit", function(event){
-  event.preventDefault();
-  console.log("hai inviato il form")
+formElement.addEventListener("submit", userObjCreatingAndPushing)
+
+
+function userObjCreatingAndPushing(e){
+  e.preventDefault();
   const userMember = {
     name: userNameElement.value,
     role: userRoleElement.value,
@@ -64,9 +66,7 @@ formElement.addEventListener("submit", function(event){
   }
   
   cardContainerElement.innerHTML += cardElementCreating(userMember);
-})
-
-
+}
 
 
 
